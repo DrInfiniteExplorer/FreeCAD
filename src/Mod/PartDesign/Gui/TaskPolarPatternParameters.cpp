@@ -107,7 +107,7 @@ TaskPolarPatternParameters::TaskPolarPatternParameters(TaskMultiTransformParamet
 void TaskPolarPatternParameters::setupUI()
 {
     connect(ui->buttonAddFeature, SIGNAL(toggled(bool)), this, SLOT(onButtonAddFeature(bool)));
-    connect(ui->buttonRemoveFeature, SIGNAL(toggled(bool)), this, SLOT(onButtonRemoveFeature(bool)));
+    connect(ui->buttonRemoveFeature, &QPushButton::pressed, std::bind(&TaskPolarPatternParameters::onFeatureDeleted, this));
 
     // Create context menu
     QAction* action = new QAction(tr("Remove"), this);

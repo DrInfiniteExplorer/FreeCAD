@@ -246,7 +246,7 @@ void TaskTransformedParameters::fillAxisCombo(ComboLinks &combolinks,
 
     //add sketch axes
     if (sketch){
-        combolinks.addLink(sketch, "N_Axis",tr("Normal sketch axis"));
+        combolinks.addLink(sketch,"N_Axis",tr("Normal sketch axis"));
         combolinks.addLink(sketch,"V_Axis",tr("Vertical sketch axis"));
         combolinks.addLink(sketch,"H_Axis",tr("Horizontal sketch axis"));
         for (int i=0; i < sketch->getAxisCount(); i++) {

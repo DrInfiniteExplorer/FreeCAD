@@ -24,6 +24,9 @@
        <property name="checkable">
         <bool>true</bool>
        </property>
+       <property name="toolTip">
+        <string>Check the wiki for instructions. Good luck.</string>
+       </property>
       </widget>
      </item>
      <item>
@@ -31,8 +34,8 @@
        <property name="text">
         <string>Remove feature</string>
        </property>
-       <property name="checkable">
-        <bool>true</bool>
+       <property name="toolTip">
+        <string>Removes the currently selected list entry</string>
        </property>
       </widget>
      </item>
@@ -154,8 +157,6 @@
   <connection>
    <sender>buttonAddFeature</sender>
    <signal>clicked(bool)</signal>
-   <receiver>buttonRemoveFeature</receiver>
-   <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>66</x>
@@ -163,22 +164,6 @@
     </hint>
     <hint type="destinationlabel">
      <x>186</x>
-     <y>21</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonRemoveFeature</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>buttonAddFeature</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>186</x>
-     <y>21</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>66</x>
      <y>21</y>
     </hint>
    </hints>
